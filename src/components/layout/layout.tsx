@@ -1,7 +1,7 @@
 import { GlobalStyle } from "@/styles/GlobalStyles";
 import { ThemeProvider } from "styled-components";
-import { theme } from "../styles/theme";
-import Navbar from "./navbar";
+import { theme } from "../../styles/theme";
+import Navbar from "../navbar/navbar";
 
 interface LayoutProps {
   children: React.ReactNode;
