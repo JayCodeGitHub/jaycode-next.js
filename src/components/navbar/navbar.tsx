@@ -5,6 +5,7 @@ import {
   Wrapper,
   LogoWrapper,
 } from "./navbar.styles";
+import NavLink from "../NavLink/NavLink";
 
 export default function Navbar() {
   return (
@@ -17,13 +18,13 @@ export default function Navbar() {
         </LogoWrapper>
         <StyledNavigation>
           <li>
-            <Link href="/about">About</Link>
+            <NavLink href="/about">About</NavLink>
           </li>
           <li>
-            <Link href="/experience">Experience</Link>
+            <NavLink href="/experience">Experience</NavLink>
           </li>
           <li>
-            <Link href="/contact">Contact</Link>
+            <NavLink href="/contact">Contact</NavLink>
           </li>
         </StyledNavigation>
       </Wrapper>

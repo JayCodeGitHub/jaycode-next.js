@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import NavLink from "../NavLink/NavLink";
 
 export const OuterWrapper = styled.nav`
   height: 8rem;
@@ -6,7 +7,6 @@ export const OuterWrapper = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: ${({ theme }) => theme.tertiary};
   padding: 0 5vw;
   color: ${({ theme }) => theme.white};
   padding: 0vw 10vw;
