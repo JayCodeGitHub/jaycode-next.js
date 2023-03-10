@@ -9,7 +9,7 @@ import {
   Hamburger,
   StyledMobileNavigation,
 } from './navbar.styles';
-import NavLink from '../NavLink/NavLink';
+import NavLink from '../navlink/navlink';
 import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 
 export default function Navbar() {

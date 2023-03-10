@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { StyledLink } from './NavLink.styles';
+import { StyledLink } from './navlink.styles';
 
 export interface NavLinkProps {
   href: string;
