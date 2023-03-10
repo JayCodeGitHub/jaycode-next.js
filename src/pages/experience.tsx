@@ -1,12 +1,10 @@
-import { Header } from '@/components/header/header.styles';
+import Header from '@/components/header/header';
 import { Wrapper } from '@/styles/pages/experience.styles';
 
 export default function Experience() {
   return (
     <>
-      <Header secondary>
-        <h1>Experience</h1>
-      </Header>
+      <Header secondary title="experience" />
       <Wrapper>
         <h1>Experience</h1>
         <br></br>

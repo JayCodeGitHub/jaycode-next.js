@@ -4,7 +4,7 @@ export interface HeaderProps {
   secondary?: boolean;
 }
 
-export const Header = styled.header<HeaderProps>`
+export const Wrapper = styled.header<HeaderProps>`
     width: 100%;
     height: ${({secondary}) => (secondary ? '35vh' : '70vh')};
     display: flex;
@@ -24,12 +24,12 @@ export const Header = styled.header<HeaderProps>`
       color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.s};
     }
-    div {
+    span {
         display: flex;
+        width: 100%;
         justify-content: space-around;
         align-items: flex-start;
         flex-direction: row;
-        padding-left: 2rem;
         button {
           margin-top: 2rem;
         }
@@ -37,18 +37,18 @@ export const Header = styled.header<HeaderProps>`
     ${({ theme }) => theme.mq.desktop}  {
         padding-left: ${({secondary}) => (secondary ? '0' : '15vw')};
         width: auto;
-        height: ${({secondary}) => (secondary ? '20vh' : '60vh')};
+        height: ${({secondary}) => (secondary ? '20vh' : '70vh')};
         h1 {
             font-size: ${({ theme }) => theme.font.size.xxl};
-            margin: 5rem 0;
+            margin-bottom: 5rem;
         }
         p {
             font-size: ${({ theme }) => theme.font.size.xl};
             margin-bottom: 5rem;
         }
-        div {
+        span {
             padding-right: 20%;
-            flex-direction: row;
+            width: auto;
             align-items: center;
             padding: 0;
             button {

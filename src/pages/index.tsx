@@ -1,26 +1,17 @@
-import Link from 'next/link';
-import { Header } from '@/components/header/header.styles';
-import { Button } from '@/components/button/button.styles';
+import Header from '@/components/header/header';
 import { Wrapper } from '@/styles/pages/homepage.styles';
 
 export default function Home() {
   return (
     <>
-      <Header>
-        <h1>Hi, I'm Jakub</h1>
-        <p>Frontend Developer</p>
-        <div>
-          <a
-            href="https://drive.google.com/file/d/1X1U-XW9mIOJ3B3jUPhQrzKB6FKEXApam/view?usp=sharing"
-            target="_blank"
-          >
-            <Button>Download my CV</Button>
-          </a>
-          <Link href="/contact">
-            <Button>Let's talk</Button>
-          </Link>
-        </div>
-      </Header>
+      <Header
+        title="Hi, I'm Jakub "
+        description="Frontend Developer"
+        firstButton="Download my CV"
+        firstButtonHref="https://drive.google.com/file/d/1X1U-XW9mIOJ3B3jUPhQrzKB6FKEXApam/view?usp=sharing"
+        secondButton="Let's talk"
+        secondButtonHref="/contact"
+      />
       <Wrapper>
         <h1>Jaycode</h1>
         <br></br>

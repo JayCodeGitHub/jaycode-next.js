@@ -1,12 +1,10 @@
-import { Header } from '@/components/header/header.styles';
+import Header from '@/components/header/header';
 import { Wrapper } from '@/styles/pages/about.styles';
 
 export default function About() {
   return (
     <>
-      <Header secondary>
-        <h1>About</h1>
-      </Header>
+      <Header secondary title="about" />
       <Wrapper>
         <h1>About</h1>
         <br></br>

@@ -1,12 +1,10 @@
-import { Header } from '@/components/header/header.styles';
+import Header from '@/components/header/header';
 import { Wrapper } from '@/styles/pages/contact.styles';
 
 export default function Contact() {
   return (
     <>
-      <Header secondary>
-        <h1>Contact</h1>
-      </Header>
+      <Header secondary title="contact" />
       <Wrapper>
         <h1>Contact</h1>
         <br></br>
