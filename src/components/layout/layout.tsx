@@ -3,6 +3,7 @@ import { GlobalStyle } from '@/styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../styles/theme';
 import Navbar from '../navbar/navbar';
+import Background from '../background/background';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ export default function Layout({ children }: LayoutProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <GlobalStyle />
+      <Background />
       <Navbar />
       {children}
     </ThemeProvider>
