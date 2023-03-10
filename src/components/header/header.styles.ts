@@ -44,6 +44,7 @@ export const Header = styled.header<HeaderProps>`
         }
         p {
             font-size: ${({ theme }) => theme.font.size.xl};
+            margin-bottom: 5rem;
         }
         div {
             padding-right: 20%;

@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { Header } from '@/components/header/header.styles';
+import { Button } from '@/components/button/button.styles';
 import { Wrapper } from '@/styles/pages/homepage.styles';
 
 export default function Home() {
@@ -8,8 +10,15 @@ export default function Home() {
         <h1>Hi, I'm Jakub</h1>
         <p>Frontend Developer</p>
         <div>
-          <button>Download my CV</button>
-          <button>Let's talk</button>
+          <a
+            href="https://drive.google.com/file/d/1X1U-XW9mIOJ3B3jUPhQrzKB6FKEXApam/view?usp=sharing"
+            target="_blank"
+          >
+            <Button>Download my CV</Button>
+          </a>
+          <Link href="/contact">
+            <Button>Let's talk</Button>
+          </Link>
         </div>
       </Header>
       <Wrapper>
