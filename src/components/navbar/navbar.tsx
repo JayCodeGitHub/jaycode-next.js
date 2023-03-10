@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useState } from 'react';
+import Link from 'next/link';
 import {
   OuterWrapper,
   StyledNavigation,
@@ -7,11 +8,14 @@ import {
   HamburgerWrapper,
   Hamburger,
   StyledMobileNavigation,
-} from "./navbar.styles";
-import NavLink from "../NavLink/NavLink";
-import { NavigationItems } from "../../assets/items/NavigationItems/NavigationItems";
+} from './navbar.styles';
+import NavLink from '../NavLink/NavLink';
+import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleNavigation = () => setIsOpen(!isOpen);
+  const setIsOpenFalse = () => setIsOpen(false);
   return (
     <OuterWrapper>
       <Wrapper>
@@ -23,19 +27,23 @@ export default function Navbar() {
         <StyledNavigation>
           {NavigationItems.map((item) => (
             <li key={item.name}>
-              <NavLink href={item.href}>{item.name}</NavLink>
+              <NavLink href={item.href} onClick={setIsOpenFalse}>
+                {item.name}
+              </NavLink>
             </li>
           ))}
         </StyledNavigation>
-        <HamburgerWrapper>
-          <Hamburger />
+        <HamburgerWrapper onClick={toggleNavigation}>
+          <Hamburger isOpen={isOpen} />
         </HamburgerWrapper>
       </Wrapper>
-      <StyledMobileNavigation>
+      <StyledMobileNavigation isOpen={isOpen}>
         <ul>
           {NavigationItems.map((item) => (
             <li key={item.name}>
-              <NavLink href={item.href}>{item.name}</NavLink>
+              <NavLink href={item.href} onClick={setIsOpenFalse}>
+                {item.name}
+              </NavLink>
             </li>
           ))}
         </ul>
