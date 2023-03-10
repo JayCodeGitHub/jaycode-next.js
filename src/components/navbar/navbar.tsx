@@ -4,8 +4,12 @@ import {
   StyledNavigation,
   Wrapper,
   LogoWrapper,
+  HamburgerWrapper,
+  Hamburger,
+  StyledMobileNavigation,
 } from "./navbar.styles";
 import NavLink from "../NavLink/NavLink";
+import { NavigationItems } from "../../assets/items/NavigationItems/NavigationItems";
 
 export default function Navbar() {
   return (
@@ -17,17 +21,25 @@ export default function Navbar() {
           </Link>
         </LogoWrapper>
         <StyledNavigation>
-          <li>
-            <NavLink href="/about">About</NavLink>
-          </li>
-          <li>
-            <NavLink href="/experience">Experience</NavLink>
-          </li>
-          <li>
-            <NavLink href="/contact">Contact</NavLink>
-          </li>
+          {NavigationItems.map((item) => (
+            <li key={item.name}>
+              <NavLink href={item.href}>{item.name}</NavLink>
+            </li>
+          ))}
         </StyledNavigation>
+        <HamburgerWrapper>
+          <Hamburger />
+        </HamburgerWrapper>
       </Wrapper>
+      <StyledMobileNavigation>
+        <ul>
+          {NavigationItems.map((item) => (
+            <li key={item.name}>
+              <NavLink href={item.href}>{item.name}</NavLink>
+            </li>
+          ))}
+        </ul>
+      </StyledMobileNavigation>
     </OuterWrapper>
   );
 }

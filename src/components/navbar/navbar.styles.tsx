@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import NavLink from "../NavLink/NavLink";
 
 export const OuterWrapper = styled.nav`
   height: 8rem;
@@ -44,4 +43,14 @@ export const LogoWrapper = styled.div`
       color: ${({ theme }) => theme.primary};
     }
   }
+`;
+
+export const HamburgerWrapper = styled.button`
+  display: none;
+`;
+
+export const Hamburger = styled.div``;
+
+export const StyledMobileNavigation = styled.div`
+  display: none;
 `;

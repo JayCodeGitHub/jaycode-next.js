@@ -25,4 +25,7 @@ export const StyledLink = styled(Link)`
   &:hover::before {
     transform: scaleX(1);
   }
+  ${({ theme }) => theme.mq.phone} {
+    font-size: ${({ theme }) => theme.font.size.m};
+  }
 `;
