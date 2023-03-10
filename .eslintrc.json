@@ -1,7 +1,8 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "linebreak-style": "off"
+    "linebreak-style": "off",
+    "react/no-unescaped-entities": "off"
   }
 }
 
