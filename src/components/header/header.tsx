@@ -1,6 +1,7 @@
 import { Wrapper } from './header.styles';
 import { Button } from '../button/button.styles';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 export interface HeaderProps {
   secondary?: boolean;
@@ -23,20 +24,61 @@ export default function Header({
 }: HeaderProps) {
   return (
     <Wrapper secondary={secondary}>
-      <h1>{title}</h1>
       {!secondary ? (
         <>
-          <p>{description}</p>
           <span>
-            <a href={firstButtonHref} target="_blank">
-              <Button>{firstButton}</Button>
-            </a>
-            <Link href={secondButtonHref ? secondButtonHref : ''}>
-              <Button>{secondButton}</Button>
-            </Link>
+            <motion.h1
+              initial={{ x: '-100%' }}
+              animate={{ x: '0%' }}
+              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              exit={{ x: '-100%' }}
+            >
+              {title}
+            </motion.h1>
+          </span>
+          <span>
+            <motion.p
+              initial={{ x: '-100%' }}
+              animate={{ x: '0%' }}
+              transition={{ delay: 0.5, duration: 0.5, ease: 'easeInOut' }}
+              exit={{ x: '-100%' }}
+            >
+              {description}
+            </motion.p>
+          </span>
+          <span>
+            <motion.span
+              initial={{ opacity: '0%' }}
+              animate={{ opacity: '100%' }}
+              transition={{ delay: 1, duration: 0.5, ease: 'easeInOut' }}
+              exit={{ opacity: '0%' }}
+            >
+              <a href={firstButtonHref} target="_blank">
+                <Button>{firstButton}</Button>
+              </a>
+            </motion.span>
+            <motion.span
+              initial={{ opacity: '0%' }}
+              animate={{ opacity: '100%' }}
+              transition={{ delay: 1.5, duration: 0.5, ease: 'easeInOut' }}
+              exit={{ opacity: '0%' }}
+            >
+              <Link href={secondButtonHref ? secondButtonHref : ''}>
+                <Button>{secondButton}</Button>
+              </Link>
+            </motion.span>
           </span>
         </>
-      ) : null}
+      ) : (
+        <motion.h1
+          initial={{ y: '-100%', opacity: '0%' }}
+          animate={{ y: '0%', opacity: '100%' }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          exit={{ y: '-100%', opacity: '0%' }}
+        >
+          {title}
+        </motion.h1>
+      )}
     </Wrapper>
   );
 }

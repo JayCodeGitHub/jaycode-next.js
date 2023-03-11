@@ -30,6 +30,7 @@ export const Wrapper = styled.header<HeaderProps>`
         justify-content: space-around;
         align-items: flex-start;
         flex-direction: row;
+        overflow: hidden;
         button {
           margin-top: 2rem;
         }
