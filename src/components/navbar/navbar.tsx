@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
   OuterWrapper,
@@ -14,8 +15,12 @@ import { NavigationItems } from '../../assets/items/NavigationItems/NavigationIt
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const toggleNavigation = () => setIsOpen(!isOpen);
-  const setIsOpenFalse = () => setIsOpen(false);
+  const toggleNavigation = () => {
+    setIsOpen(!isOpen);
+  };
+  const setIsOpenFalse = () => {
+    setIsOpen(false);
+  };
   return (
     <OuterWrapper>
       <Wrapper>
@@ -51,3 +56,7 @@ export default function Navbar() {
     </OuterWrapper>
   );
 }
+
+Navbar.getInitialProps = async ({}) => {
+  return { ssr: false };
+};

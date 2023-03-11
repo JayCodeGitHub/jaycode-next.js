@@ -1,9 +1,11 @@
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
 import { GlobalStyle } from '@/styles/GlobalStyles';
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../../styles/theme';
-import Navbar from '../navbar/navbar';
 import Background from '../background/background';
+
+const Navbar = dynamic(() => import('../navbar/navbar'), { ssr: false });
 
 interface LayoutProps {
   children: React.ReactNode;
