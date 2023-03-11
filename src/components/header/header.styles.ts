@@ -27,10 +27,11 @@ export const Wrapper = styled.header<HeaderProps>`
     }
     span {
         display: flex;
+        padding-left: 20px;
         width: 100%;
         justify-content: space-around;
         align-items: flex-start;
-        flex-direction: row;
+        flex-direction: column;
         overflow: hidden;
         button {
           margin-top: 2rem;
@@ -50,8 +51,10 @@ export const Wrapper = styled.header<HeaderProps>`
         }
         span {
             padding-right: 20%;
+            padding-left: 0;
             width: auto;
             align-items: center;
+            flex-direction: row;
             padding: 0;
             button {
                 margin-top: 0;
