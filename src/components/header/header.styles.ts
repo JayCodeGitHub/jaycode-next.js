@@ -6,7 +6,7 @@ export interface HeaderProps {
 
 export const Wrapper = styled.header<HeaderProps>`
     width: 100%;
-    height: ${({secondary}) => (secondary ? '35vh' : '70vh')};
+    height: ${({secondary}) => (secondary ? '35vh' : '60vh')};
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -39,7 +39,7 @@ export const Wrapper = styled.header<HeaderProps>`
     ${({ theme }) => theme.mq.desktop}  {
         padding-left: ${({secondary}) => (secondary ? '0' : '15vw')};
         width: auto;
-        height: ${({secondary}) => (secondary ? '20vh' : '70vh')};
+        height: ${({secondary}) => (secondary ? '20vh' : '60vh')};
         h1 {
             font-size: ${({ theme }) => theme.font.size.xxl};
             margin-bottom: 5rem;
