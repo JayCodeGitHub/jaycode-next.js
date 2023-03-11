@@ -1,11 +1,19 @@
 import Header from '@/components/header/header';
+import { motion } from 'framer-motion';
 import { Wrapper } from '@/styles/pages/contact.styles';
+
+const MotionWrapper = motion(Wrapper);
 
 export default function Contact() {
   return (
     <>
       <Header secondary title="contact" />
-      <Wrapper>
+      <MotionWrapper
+        initial={{ opacity: '0%' }}
+        animate={{ opacity: '100%' }}
+        transition={{ duration: 0.4, delay: 0.4, ease: 'easeInOut' }}
+        exit={{ opacity: '0%' }}
+      >
         <h1>Contact</h1>
         <br></br>
         <br></br>
@@ -72,7 +80,7 @@ export default function Contact() {
           debitis laudantium eos magnam, totam aperiam quis et officiis! Rem corporis in id! Beatae
           quis corrupti soluta assumenda!
         </p>
-      </Wrapper>
+      </MotionWrapper>
     </>
   );
 }

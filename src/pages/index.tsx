@@ -1,5 +1,8 @@
 import Header from '@/components/header/header';
+import { motion } from 'framer-motion';
 import { Wrapper } from '@/styles/pages/homepage.styles';
+
+const MotionWrapper = motion(Wrapper);
 
 export default function Home() {
   return (
@@ -12,7 +15,12 @@ export default function Home() {
         secondButton="Let's talk"
         secondButtonHref="/contact"
       />
-      <Wrapper>
+      <MotionWrapper
+        initial={{ opacity: '0%' }}
+        animate={{ opacity: '100%' }}
+        transition={{ duration: 0.4, delay: 1.2, ease: 'easeInOut' }}
+        exit={{ opacity: '0%' }}
+      >
         <h1>Jaycode</h1>
         <br></br>
         <br></br>
@@ -144,7 +152,7 @@ export default function Home() {
           debitis laudantium eos magnam, totam aperiam quis et officiis! Rem corporis in id! Beatae
           quis corrupti soluta assumenda!
         </p>
-      </Wrapper>
+      </MotionWrapper>
     </>
   );
 }

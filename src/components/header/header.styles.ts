@@ -58,4 +58,7 @@ export const Wrapper = styled.header<HeaderProps>`
             }
          }
     }
+    div {
+        overflow: hidden;
+    }
 `
