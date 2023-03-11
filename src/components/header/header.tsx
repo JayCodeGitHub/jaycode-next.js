@@ -26,7 +26,7 @@ export default function Header({
     <Wrapper secondary={secondary}>
       {!secondary ? (
         <>
-          <span>
+          <div>
             <motion.h1
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
@@ -35,8 +35,8 @@ export default function Header({
             >
               {title}
             </motion.h1>
-          </span>
-          <span>
+          </div>
+          <div>
             <motion.p
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
@@ -45,9 +45,9 @@ export default function Header({
             >
               {description}
             </motion.p>
-          </span>
+          </div>
           <span>
-            <motion.span
+            <motion.div
               initial={{ opacity: '0%' }}
               animate={{ opacity: '100%' }}
               transition={{ delay: 0.8, duration: 0.4, ease: 'easeInOut' }}
@@ -56,8 +56,8 @@ export default function Header({
               <a href={firstButtonHref} target="_blank">
                 <Button>{firstButton}</Button>
               </a>
-            </motion.span>
-            <motion.span
+            </motion.div>
+            <motion.div
               initial={{ opacity: '0%' }}
               animate={{ opacity: '100%' }}
               transition={{ delay: 1.2, duration: 0.4, ease: 'easeInOut' }}
@@ -66,7 +66,7 @@ export default function Header({
               <Link href={secondButtonHref ? secondButtonHref : ''}>
                 <Button>{secondButton}</Button>
               </Link>
-            </motion.span>
+            </motion.div>
           </span>
         </>
       ) : (

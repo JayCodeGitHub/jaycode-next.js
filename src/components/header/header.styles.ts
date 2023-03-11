@@ -21,8 +21,9 @@ export const Wrapper = styled.header<HeaderProps>`
         margin: 2.5rem 0;
     }
     p {
-      color: ${({ theme }) => theme.white};
+        color: ${({ theme }) => theme.white};
         font-size: ${({ theme }) => theme.font.size.s};
+        padding-left: 10px;
     }
     span {
         display: flex;

@@ -41,7 +41,7 @@ export const Wrapper = styled.div`
 `;
 
 export const LogoWrapper = styled.div`
-  z-index: 10;
+  z-index: 20;
   a {
     color: inherit;
     text-decoration: none;
@@ -62,7 +62,7 @@ export const HamburgerWrapper = styled.button`
   padding: 0;
   cursor: pointer;
   background-color: transparent;
-  z-index: 10;
+  z-index: 20;
   ${({ theme }) => theme.mq.desktop} {
     display: none;
   }
@@ -99,7 +99,7 @@ export const StyledMobileNavigation = styled.div<HamburgerProps>`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 0;
+  z-index: 10;
   top: 0;
   left: 0;
   background-color: ${({ theme }) => theme.tertiary};
