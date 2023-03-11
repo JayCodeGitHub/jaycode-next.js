@@ -30,7 +30,7 @@ export default function Header({
             <motion.h1
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
+              transition={{ duration: 0.4, ease: 'easeInOut' }}
               exit={{ x: '-100%' }}
             >
               {title}
@@ -40,7 +40,7 @@ export default function Header({
             <motion.p
               initial={{ x: '-100%' }}
               animate={{ x: '0%' }}
-              transition={{ delay: 0.5, duration: 0.5, ease: 'easeInOut' }}
+              transition={{ delay: 0.4, duration: 0.4, ease: 'easeInOut' }}
               exit={{ x: '-100%' }}
             >
               {description}
@@ -50,7 +50,7 @@ export default function Header({
             <motion.span
               initial={{ opacity: '0%' }}
               animate={{ opacity: '100%' }}
-              transition={{ delay: 1, duration: 0.5, ease: 'easeInOut' }}
+              transition={{ delay: 0.8, duration: 0.4, ease: 'easeInOut' }}
               exit={{ opacity: '0%' }}
             >
               <a href={firstButtonHref} target="_blank">
@@ -60,7 +60,7 @@ export default function Header({
             <motion.span
               initial={{ opacity: '0%' }}
               animate={{ opacity: '100%' }}
-              transition={{ delay: 1.5, duration: 0.5, ease: 'easeInOut' }}
+              transition={{ delay: 1.2, duration: 0.4, ease: 'easeInOut' }}
               exit={{ opacity: '0%' }}
             >
               <Link href={secondButtonHref ? secondButtonHref : ''}>
@@ -73,7 +73,7 @@ export default function Header({
         <motion.h1
           initial={{ y: '-100%', opacity: '0%' }}
           animate={{ y: '0%', opacity: '100%' }}
-          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
           exit={{ y: '-100%', opacity: '0%' }}
         >
           {title}
