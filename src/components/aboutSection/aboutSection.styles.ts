@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import Image from 'next/image';
 
 export const Wrapper = styled.div`
    width: 100%;
@@ -56,4 +57,19 @@ export const Wrapper = styled.div`
          width: 50rem;
       }
     }
-`   
+`  
+
+export const ImageWrapper = styled.div`
+ position: relative;
+      width: 90%;
+      aspect-ratio: 1/1;
+      border-radius: 15px;
+   ${({ theme }) => theme.mq.bigDesktop} {
+         width: 50rem;
+    }
+     ${({ theme }) => theme.mq.desktop} {
+         width: 30vw;
+         aspect-ratio: 1/1;
+    }
+    background-color: red;
+`
