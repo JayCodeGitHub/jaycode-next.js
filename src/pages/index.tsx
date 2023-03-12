@@ -1,6 +1,6 @@
 import Header from '@/components/header/header';
 import AboutSection from '@/components/aboutSection/aboutSection';
-import AnimationSection from '@/components/AnimationSection/AnimationSection';
+import AnimationSection from '@/components/animationSection/animationSection';
 import { motion } from 'framer-motion';
 import { Wrapper } from '../styles/pages/homepage.styles';
 

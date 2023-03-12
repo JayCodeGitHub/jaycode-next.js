@@ -1,15 +1,9 @@
 import Image from 'next/image';
 import { Wrapper } from './aboutSection.styles';
 import { Button } from '../button/button.styles';
+import { AboutSectionItems } from '@/assets/items/AboutSectionItems';
 
 function AboutSection() {
-  const AboutSectionItems = {
-    title: `Hello, I'm Jakub passionate frontend developer located in Poland.`,
-    description: `I'm focusing on developing my skills through ongoing projects. I'm interested in the front end and working on ambitious projects. I have experience in commercial projects and working with clients.`,
-    href: '/about',
-    alt: 'Profile Image',
-    button: 'See More',
-  };
   return (
     <>
       <Wrapper>
@@ -20,7 +14,7 @@ function AboutSection() {
             <Button>{AboutSectionItems.button}</Button>
           </a>
         </div>
-        <Image src="/images/profile.jpeg" alt={AboutSectionItems.alt} width={500} height={500} />
+        <Image src={AboutSectionItems.image} alt={AboutSectionItems.alt} width={500} height={500} />
       </Wrapper>
     </>
   );
