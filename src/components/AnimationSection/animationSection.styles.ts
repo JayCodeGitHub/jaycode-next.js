@@ -45,7 +45,7 @@ export const SvgWrapper = styled.div`
     }
 `
 
-export const DescriptionWrapper = styled.div`
+export const DescriptionWrapper = styled.span`
     width: 50%;
     ${({ theme }) => theme.mq.desktop} {
         width: 100%;

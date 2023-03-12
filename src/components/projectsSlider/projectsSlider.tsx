@@ -1,6 +1,13 @@
 import React from 'react';
 import Image from 'next/image';
-import { Wrapper, Header, ProjectsWrapper, Project, IconsWrapper } from './projectsSlider.styles';
+import {
+  Wrapper,
+  Header,
+  ProjectsWrapper,
+  Project,
+  IconsWrapper,
+  ImageWrapper,
+} from './projectsSlider.styles';
 import ArrowButton from '../arrowButton/arrowButton';
 import { ProjectsSliderItems } from '@/assets/items/ProjectsSliderItems';
 
@@ -14,7 +21,15 @@ const ProjectsSlider = () => {
       <ProjectsWrapper>
         {ProjectsSliderItems.map((item, i) => (
           <Project key={i}>
-            <Image src={item.image} alt={item.alt} width={500} height={700} />
+            <ImageWrapper>
+              <Image
+                src={item.image}
+                alt={item.alt}
+                layout="fill"
+                objectFit="cover"
+                objectPosition="center"
+              />
+            </ImageWrapper>
             <h2>{item.name}</h2>
             <IconsWrapper>
               <a target="_blank" aria-label="GitHub Source" href={item.github}>

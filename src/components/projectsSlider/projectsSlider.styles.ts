@@ -40,12 +40,6 @@ export const Project = styled.div`
     height: 100%;
     width: 90%;
     margin: 5rem 0;
-    img {
-        width: 100%;
-        aspect-ratio: 20/41;
-        border-radius: 15px;
-        box-shadow: 0 0 10px ${({ theme }) => theme.white};
-    }
     h2 {
         font-size: ${({ theme }) => theme.font.size.m};
     }
@@ -70,4 +64,13 @@ export const IconsWrapper = styled.div`
             }
         }
     }
+`
+
+
+export const ImageWrapper = styled.div`
+    width: 100%;
+    aspect-ratio: 20/41;
+    border-radius: 15px;
+    position: relative;
+    box-shadow: 0 0 10px ${({ theme }) => theme.white};
 `

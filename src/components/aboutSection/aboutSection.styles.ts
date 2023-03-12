@@ -45,7 +45,7 @@ export const Wrapper = styled.div`
     }
 `  
 
-export const ImageWrapper = styled.div`
+export const ImageWrapper = styled.span`
    position: relative;
    width: 90%;
    aspect-ratio: 1/1;
