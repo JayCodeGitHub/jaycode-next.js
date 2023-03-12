@@ -72,5 +72,6 @@ export const ImageWrapper = styled.div`
     aspect-ratio: 20/41;
     border-radius: 15px;
     position: relative;
+    overflow: hidden;
     box-shadow: 0 0 10px ${({ theme }) => theme.white};
 `
