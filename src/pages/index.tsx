@@ -1,5 +1,6 @@
 import Header from '@/components/header/header';
 import AboutSection from '@/components/aboutSection/aboutSection';
+import AnimationSection from '@/components/AnimationSection/AnimationSection';
 import { motion } from 'framer-motion';
 import { Wrapper } from '../styles/pages/homepage.styles';
 
@@ -23,6 +24,7 @@ export default function Home() {
         exit={{ opacity: '0%' }}
       >
         <AboutSection />
+        <AnimationSection />
       </MotionWrapper>
     </>
   );
