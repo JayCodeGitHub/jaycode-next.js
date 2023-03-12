@@ -6,7 +6,6 @@ import {
   StyledSection,
   ImageWrapper,
   DescriptionWrapper,
-  StyledImage,
   Title,
   Paragraph,
   StyledTechnologies,
@@ -39,7 +38,13 @@ export default function About() {
             </StyledTechnologies>
           </DescriptionWrapper>
           <ImageWrapper>
-            <Image src={AboutPageItems.image} alt={AboutPageItems.alt} width={500} height={450} />
+            <Image
+              src={AboutPageItems.image}
+              alt={AboutPageItems.alt}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
+            />
           </ImageWrapper>
         </StyledSection>
       </MotionWrapper>

@@ -19,21 +19,18 @@ export const StyledSection = styled.section`
 `
 
 export const ImageWrapper = styled.div`
+    position: relative;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ${({ theme }) => theme.mq.desktop} {
-        width: 50%;
-    }
-`
-
-export const StyledImage = styled.img`
-    width: 90%;
     aspect-ratio: 1/1;
     border-radius: 1.5rem;
+    overflow: hidden;
     ${({ theme }) => theme.mq.desktop} {
-        width: 75%;
+        width: 40%;
+        height: 40vw;
+    }
+    ${({ theme }) => theme.mq.bigDesktop} {
+        height: 30vw;
+        margin: 5%;
     }
 `
 

@@ -18,11 +18,6 @@ export const Wrapper = styled.div`
       width: 100%;
       font-size: ${({ theme }) => theme.font.size.s};
    }
-   img {
-      width: 90%;
-      aspect-ratio: 1/1;
-      border-radius: 15px;
-   }
    div {
       width: 90%;
       height: 70%;
@@ -47,29 +42,20 @@ export const Wrapper = styled.div`
       width: 45%;
       }
       flex-direction: row;
-      img {
-         width: 30vw;
-         aspect-ratio: 1/1;
-      }
-    }
-   ${({ theme }) => theme.mq.bigDesktop} {
-      img {
-         width: 50rem;
-      }
     }
 `  
 
 export const ImageWrapper = styled.div`
- position: relative;
-      width: 90%;
-      aspect-ratio: 1/1;
-      border-radius: 15px;
+   position: relative;
+   width: 90%;
+   aspect-ratio: 1/1;
+   border-radius: 1.5rem;
+   overflow: hidden;
    ${({ theme }) => theme.mq.bigDesktop} {
-         width: 50rem;
+      width: 50rem;
+   }
+   ${({ theme }) => theme.mq.desktop} {
+      width: 30vw;
+      aspect-ratio: 1/1;
     }
-     ${({ theme }) => theme.mq.desktop} {
-         width: 30vw;
-         aspect-ratio: 1/1;
-    }
-    background-color: red;
 `
