@@ -11,7 +11,7 @@ import {
   StyledMobileNavigation,
 } from './navbar.styles';
 import NavLink from '../navlink/navlink';
-import { NavigationItems } from '../../assets/items/NavigationItems/NavigationItems';
+import { NavigationItems } from '../../assets/items/NavigationItems';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
