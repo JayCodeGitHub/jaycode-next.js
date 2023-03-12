@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import dynamic from 'next/dynamic';
 import Link from 'next/link';
 import {
   OuterWrapper,
@@ -10,8 +9,8 @@ import {
   Hamburger,
   StyledMobileNavigation,
 } from './navbar.styles';
-import NavLink from '@/components/navlink/navlink';
-import { NavigationItems } from '@/assets/items/NavigationItems';
+import NavLink from '../navlink/navlink';
+import { NavigationItems } from '../../assets/items/NavigationItems';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
