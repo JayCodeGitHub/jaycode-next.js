@@ -1,6 +1,6 @@
+import Image from 'next/image';
 import { Wrapper } from './aboutSection.styles';
 import { Button } from '../button/button.styles';
-import Image from 'next/image';
 
 function AboutSection() {
   const AboutSectionItems = {
