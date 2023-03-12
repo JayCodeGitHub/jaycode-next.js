@@ -29,7 +29,7 @@ const ProjectSection = ({
     <>
       <Wrapper>
         <ImageWrapper order={i}>
-          <Image src={src} alt={alt} width={500} height={450} />
+          <Image src={src} alt={alt} layout="fill" objectPosition="center" />
         </ImageWrapper>
         <ContentWrapper order={i}>
           <p>{type}</p>

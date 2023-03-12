@@ -14,14 +14,10 @@ export const Wrapper = styled.section`
 export const ImageWrapper = styled.div<{order: number}>`
     grid-area: ${({ order }) => (order % 2 === 0 ? '1 / 8 / 1 / 1' : '1 / 7 / -1 / -1')};
     position: relative;
+    aspect-ratio: 64/35;
     z-index: 1;
     right: 0;
     top: 0;
-    img {
-        width: 100%;
-        aspect-ratio: 64/35;
-        border-radius: 5px;
-    }
 `
 
 export const ContentWrapper = styled.div<{order: number}>`
