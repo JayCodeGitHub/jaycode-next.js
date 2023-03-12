@@ -43,7 +43,7 @@ export const Wrapper = styled.header<HeaderProps>`
         height: ${({secondary}) => (secondary ? '20vh' : '60vh')};
         h1 {
             font-size: ${({ theme }) => theme.font.size.xxl};
-            margin-bottom: 5rem;
+            margin: 5rem 0 0 0;
         }
         p {
             font-size: ${({ theme }) => theme.font.size.xl};
