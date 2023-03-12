@@ -40,7 +40,7 @@ export const Wrapper = styled.header<HeaderProps>`
     ${({ theme }) => theme.mq.desktop}  {
         padding-left: ${({secondary}) => (secondary ? '0' : '15vw')};
         width: auto;
-        height: ${({secondary}) => (secondary ? '20vh' : '60vh')};
+        height: ${({secondary}) => (secondary ? '20vh' : '70vh')};
         h1 {
             font-size: ${({ theme }) => theme.font.size.xxl};
             margin: 5rem 0 0 0;
