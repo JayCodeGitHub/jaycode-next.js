@@ -11,6 +11,7 @@ export const OuterWrapper = styled(Link)`
     text-decoration: none;
     color: ${({ theme }) => theme.white};
     transform: translateX(0);
+    margin-top: 2rem;
     cursor: pointer;
     span {
         margin-right: 3.5rem;
@@ -21,6 +22,9 @@ export const OuterWrapper = styled(Link)`
     &:hover{
         color: ${({ theme }) => theme.grey};
         transform: translateX(1rem);
+    }
+    ${({ theme }) => theme.mq.desktop} {
+        margin-top: 0rem;
     }
 `
 
