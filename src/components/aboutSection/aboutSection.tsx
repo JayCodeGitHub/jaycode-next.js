@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { Wrapper, ImageWrapper } from './aboutSection.styles';
 import { Button } from '../button/button.styles';
 import { AboutSectionItems } from '@/assets/items/AboutSectionItems';
@@ -10,9 +11,9 @@ function AboutSection() {
         <div>
           <h1>{AboutSectionItems.title}</h1>
           <p>{AboutSectionItems.description}</p>
-          <a href={AboutSectionItems.href}>
+          <Link href={AboutSectionItems.href}>
             <Button>{AboutSectionItems.button}</Button>
-          </a>
+          </Link>
         </div>
         <ImageWrapper>
           <Image
