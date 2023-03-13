@@ -37,7 +37,7 @@ export default function Navbar() {
             </li>
           ))}
         </StyledNavigation>
-        <HamburgerWrapper onClick={toggleNavigation}>
+        <HamburgerWrapper onClick={toggleNavigation} aria-label="Hamburger Navigation Button">
           <Hamburger isOpen={isOpen} />
         </HamburgerWrapper>
       </Wrapper>
